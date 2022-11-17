@@ -1,5 +1,7 @@
 package co.edu.unbosque.view;
 
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Image;
 import java.awt.image.BufferedImage;
 import java.io.File;
@@ -29,33 +31,45 @@ public class VentanaPrincipal extends JFrame {
 		setLayout(null);
 		setSize(600, 450);
 		setResizable(false);
+		this.setUndecorated(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 		setLocationRelativeTo(null);
 
 		this.txtUsuario = new JTextField();
-		this.txtUsuario.setBounds(300, 170, 220, 30);
+		this.txtUsuario.setBounds(260, 190, 270, 30);
+		this.txtUsuario.setBorder(null);
 
 		this.txtContra = new JTextField();
-		this.txtContra.setBounds(300, 230, 220, 30);
+		this.txtContra.setBounds(330, 250, 200, 30);
+		this.txtContra.setBorder(null);
 
 		this.butRegistrarse = new JButton();
-		this.butRegistrarse.setIcon(new ImageIcon("src/fondo.jpg"));
-		this.butRegistrarse.setBounds(50, 340, 150, 40);
+		this.butRegistrarse.setIcon(new ImageIcon("src/Botones.png"));
+		this.butRegistrarse.setBounds(25, 340, 170, 50);
 		this.butRegistrarse.setActionCommand(REGISTRARSE);
+		this.butRegistrarse.setBorder(null);
 
-		this.butSiguiente = new JButton("SIGUIENTE");
-		this.butSiguiente.setBounds(225, 340, 150, 40);
+		this.butSiguiente = new JButton();
+		this.butSiguiente.setIcon(new ImageIcon("src/Images/Siguiente.png"));
+		this.butSiguiente.setBounds(215, 340, 170, 50);
 		this.butSiguiente.setActionCommand(SIGUIENTE);
+		this.butSiguiente.setBorder(null);
+		this.butSiguiente.setContentAreaFilled(false);
 
-		this.butSalir = new JButton("SALIR");
-		this.butSalir.setBounds(400, 340, 150, 40);
+		this.butSalir = new JButton();
+		this.butSalir.setIcon(new ImageIcon("src/Images/Salir.png"));
+//		this.butSalir.setFont(new Font("Arial", Font.BOLD, 20));
+//		this.butSalir.setForeground(Color.WHITE);
+		this.butSalir.setBounds(405, 340, 170, 50);
 		this.butSalir.setActionCommand(SALIR);
+		this.butSalir.setBorder(null);
+//		this.butSalir.setContentAreaFilled(false);
 
 		JLabel fondo = new JLabel();
 		fondo.setBounds(0, 0, 600, 450);
 		BufferedImage bi2 = null;
 		try {
-			bi2 = ImageIO.read(new File("src/bostinder.jpg"));
+			bi2 = ImageIO.read(new File("src/Images/BOSTIDER Ventanas.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
