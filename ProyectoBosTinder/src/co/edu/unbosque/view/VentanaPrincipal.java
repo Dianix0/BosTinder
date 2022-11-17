@@ -36,7 +36,7 @@ public class VentanaPrincipal extends JFrame {
 		setLocationRelativeTo(null);
 
 		this.txtUsuario = new JTextField();
-		this.txtUsuario.setBounds(260, 190, 270, 30);
+		this.txtUsuario.setBounds(330, 190, 200, 30);
 		this.txtUsuario.setBorder(null);
 
 		this.txtContra = new JTextField();
