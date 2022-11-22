@@ -44,32 +44,32 @@ public class VentanaPrincipal extends JFrame {
 		this.txtContra.setBorder(null);
 
 		this.butRegistrarse = new JButton();
-		this.butRegistrarse.setIcon(new ImageIcon("src/Botones.png"));
-		this.butRegistrarse.setBounds(25, 340, 170, 50);
+		this.butRegistrarse.setIcon(new ImageIcon("src/Images/Registrarse.png"));
+		this.butRegistrarse.setBounds(80, 340, 170, 50);
 		this.butRegistrarse.setActionCommand(REGISTRARSE);
 		this.butRegistrarse.setBorder(null);
 
 		this.butSiguiente = new JButton();
 		this.butSiguiente.setIcon(new ImageIcon("src/Images/Siguiente.png"));
-		this.butSiguiente.setBounds(215, 340, 170, 50);
+		this.butSiguiente.setBounds(350, 340, 170, 50);
 		this.butSiguiente.setActionCommand(SIGUIENTE);
 		this.butSiguiente.setBorder(null);
 		this.butSiguiente.setContentAreaFilled(false);
 
-		this.butSalir = new JButton();
-		this.butSalir.setIcon(new ImageIcon("src/Images/Salir.png"));
-//		this.butSalir.setFont(new Font("Arial", Font.BOLD, 20));
-//		this.butSalir.setForeground(Color.WHITE);
-		this.butSalir.setBounds(405, 340, 170, 50);
-		this.butSalir.setActionCommand(SALIR);
+		this.butSalir = new JButton("Salir");
+		this.butSalir.setFont(new Font("OpenSans", Font.BOLD,20));
+		this.butSalir.setForeground(Color.WHITE);
+		this.butSalir.setContentAreaFilled(false);
 		this.butSalir.setBorder(null);
-//		this.butSalir.setContentAreaFilled(false);
+//		this.butSalir.setIcon(new ImageIcon("src/Images/Salir.png"));
+		this.butSalir.setBounds(520, 10, 80, 30);
+		this.butSalir.setActionCommand(SALIR);
 
 		JLabel fondo = new JLabel();
 		fondo.setBounds(0, 0, 600, 450);
 		BufferedImage bi2 = null;
 		try {
-			bi2 = ImageIO.read(new File("src/Images/BOSTIDER Ventanas.png"));
+			bi2 = ImageIO.read(new File("src/Images/VentanaInicial.png"));
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
